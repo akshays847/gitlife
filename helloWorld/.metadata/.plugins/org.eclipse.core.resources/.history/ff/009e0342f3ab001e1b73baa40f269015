@@ -1,0 +1,47 @@
+package testingdemo;
+
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+public class newLocator {
+
+	public static void main(String[] args) {
+		
+
+		System.setProperty("webdriver.chrome.driver", "E:\\chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+		
+		
+		driver.get("https://sso.teachable.com/secure/9521/identity/login/password");
+		//driver.findElement(By.id("email")).sendKeys("ritika");
+		//driver.findElement(By.id("password")).sendKeys("hello123");
+		//driver.findElement(By.name("commit")).click();
+		
+		//String error = driver.findElement(By.cssSelector("div.inline-error")).getText();
+		//System.out.println(error);
+		
+		//driver.findElement(By.linkText("Forgot Password")).click();
+		driver.manage().window().maximize();
+		
+	driver.findElement(By.linkText("Sign Up")).click();
+	
+     WebDriverWait w = new WebDriverWait(driver, Duration.ofSeconds(5));
+     
+     
+		//driver.findElement(By.xpath("//a[@aria-label='Terms of Use']").
+	
+	
+		//driver.findElement(By.linkText("Terms of Use")).click();		
+		driver.findElement(By.xpath("//a/@href=https://teachable.com/terms-of-service/")).click();
+	
+	//driver.findElement(By.xpath(//a[@aria-label="Teachable's Terms of Use"])').c
+		
+	//	driver.findElement(By.cssSelector(a[href="https://teachable.com/terms-of-service/"])).click();
+		} 
+	
+
+}
